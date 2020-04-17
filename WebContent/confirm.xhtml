@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">      
+<h:head>
+  <title>Formulir Survei Siswa</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
+  <style>
+  
+div {
+	  border-radius: 5px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+h1,h2,h3 {
+  text-align: center;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+h1.title {
+  display: table;
+  margin: auto;
+  background-color: #afc4d6;
+  border-width: 4px;
+  border-style: outset;
+  border-color: #9fd1ff;
+  padding: 5px 8px;
+  letter-spacing: -.025em;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+  
+  </style>
+  
+</h:head>
+
+<h:body>
+
+<div class="container">
+  <!-- Navbar -->
+	<div class="w3-bar w3-black">
+	  <a href="http://ec2-54-162-240-168.compute-1.amazonaws.com/" class="w3-bar-item w3-button">Home</a>
+	  <a href="http://3.82.103.69:8080/uts_rsbk/" class="w3-bar-item w3-button">Tugas UTS</a>
+	</div>
+
+   
+
+
+  <h:form>
+    <h2>Preview Pengisian</h2>
+    <h5>Jika semua data sudah benar, silahkan klik Kirim</h5>
+    	<table>
+			<tr>
+				<td>Nama Depan:</td>
+				<td><h:outputText value="#{employeeBean.namaDepan}" /></td>
+			</tr>
+			<tr>
+				   <td>Nama Belakang:</td>
+				<td><h:outputText value="#{employeeBean.namaBelakang}" /></td>
+			</tr>
+			<tr>
+				 <td>Alamat Jalan:</td>
+				<td><h:outputText value="#{employeeBean.address}" /></td>
+			</tr>
+			<tr>
+				 <td>Kota:</td>
+				<td><h:outputText value="#{employeeBean.kota}" /></td>
+			</tr>
+			<tr>
+				<td>Negara Bagian:</td>
+				<td><h:outputText value="#{employeeBean.negara}" /></td>
+			</tr>
+			<tr>
+				<td>Pos:</td>
+				<td><h:outputText value="#{employeeBean.pos}" /></td>
+			</tr>
+			<tr>
+				<td>No Telepon:</td>
+				<td><h:outputText value="#{employeeBean.mobileNumber}" /></td>
+			</tr>
+			<tr>
+				<td>Email Address:</td>
+				<td><h:outputText value="#{employeeBean.emailAddress}" /></td>
+			</tr>
+			
+			<tr>
+				<td>Tanggal Survey:</td>
+				<td><h:outputText value="#{employeeBean.tglsurvey}" /></td>
+			</tr>
+			<tr>
+				<td>Apa Yang Kalian Sukai Tentang Kampus?:</td>
+				<td><h:outputText value="#{employeeBean.sukaInString}" /></td>
+			</tr>
+						<tr>
+				<td>Bagaimana Tertarik Dengan Undip:</td>
+				<td><h:outputText value="#{employeeBean.fasilitas}" /></td>
+			</tr>
+			
+						<tr>
+		  <td>Apakah Kamu Ingin merekomendasikan??</td>
+				<td><h:outputText value="#{employeeBean.rekomendasi}" /></td>
+			</tr>
+			
+			
+						<tr>
+				<td>Komentar Tambahan:</td>
+				<td><h:outputText value="#{employeeBean.komentar}" /></td>
+			</tr>
+			<tr>
+			</tr>
+		</table>
+	
+    <p>
+  <h:commandButton value="Kirim" action="success" />
+  <h:commandButton value="batal" action="formsiswa" />
+  </p>
+  </h:form>
+  </div>
+</h:body>
+</html>
