@@ -26,6 +26,8 @@ http://3.82.103.69:8080/uts_rsbk/
 ```
 
 ## Screenshoot
-
+Halaman Utama
 ![Halaman Utama](doc/homepage.png)
+
+UTS
 ![UTS](doc/uts.png)
